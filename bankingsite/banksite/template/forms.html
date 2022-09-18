@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMS</title>
+</head>
+<body>
+<form action="lastpage" method="post">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="enter name"><br>
+    <input type="date" name="date_of_birth" placeholder="enter DOB"><br>
+    <input type="number" name="age" placeholder="enter age"><br>
+    <input type="text" name="gender" placeholder="enter gender"><br>
+    <input type="number" name="phone_number" placeholder="enter phone number"><br>
+    <input type="email" name="email" placeholder="enter email id"><br>
+    <input type="text" name="address" placeholder="enter address"><br>
+     <label for="district">Choose a district:</label>
+      <select name="district" id="district">
+         <option value="Thrissur">Thrissur</option>
+         <option value="Ernakulam">Ernakulam</option>
+         <option value="Trivandrum">Trivandrum</option>
+         <option value="Kottayam">Kottayam</option>
+      </select>
+      <br>
+    <label>Account Type</label><br>
+     <label>savings account</label>
+    <input type="radio" name="savings account"><br>
+     <label>current account</label>
+    <input type="radio" name="current account"><br>
+     <label>credit account</label>
+    <input type="radio" name="credit account"><br>
+    <label>Materials Provide</label><br>
+    <label>Debit card</label>
+    <input type="radio" name="Debit card" ><br>
+     <label>Credit card</label>
+    <input type="radio" name="Credit card" ><br>
+     <label>cheque</label>
+    <input type="radio" name="cheque"><br>
+    <input type="submit"><br>
+</form>
+
+    <li><a href="{% url 'logout' %}">Logout</a></li>
+
+</body>
+</html>
